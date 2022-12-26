@@ -1,0 +1,9 @@
+type CBT @entity {
+  id: ID!
+  tokenID: BigInt!
+  owner: String!
+  amount: BigInt!
+  mintTime: BigInt!
+}
+
+# ! means non-nullable

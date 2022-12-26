@@ -1,0 +1,23 @@
+# IDE
+.idea/
+.vscode/
+
+node_modules/
+.env
+generated/
+artifacts/
+cache/
+deployments/localhost_*
+contracts.json
+bin/
+
+data/
+# Artifacts
+build/
+
+.env
+generated/
+artifacts/
+cache/
+deployments/localhost_*
+contracts.json

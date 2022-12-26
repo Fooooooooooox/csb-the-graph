@@ -1,0 +1,19 @@
+{
+  "name": "my_subgraph",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "codegen": "graph codegen",
+    "create-local": "graph create crossbell/cbt --node http://127.0.0.1:8020",
+    "build": "graph build",
+    "deploy-local": "graph deploy crossbell/cbt --debug --ipfs http://localhost:5001 --node http://127.0.0.1:8020/",
+    "watch-local": "graph deploy crossbell/cbt --watch --debug --node http://127.0.0.1:8020/ --ipfs http://localhost:5001"
+  },
+  "devDependencies": {
+    "@graphprotocol/graph-cli": "^0.37.1",
+    "@graphprotocol/graph-ts": "^0.29.1",
+    "@investorid/solidity": "^0.2.0",
+    "@onchain-id/solidity": "^2.0.0-beta-2"
+  }
+}

@@ -1,0 +1,26 @@
+specVersion: 0.0.4
+description: Decentralized identities over the Ethereum Blockchain.
+repository: https://github.com/investorid/investorid-subgraph
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: CBT
+    network: https://rpc.crossbell.io
+    source:
+      abi: CharacterBoundToken
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.6
+      language: wasm/assemblyscript
+      file: ./src/handlers/identity.ts
+      entities:
+        - CBT
+      abis:
+        - name: CharacterBoundToken
+          file: ./abis/CharacterBoundToken.json
+      eventHandlers:
+        - event: Mint(indexed uint256,indexed uint256,indexed uint256)
+          handler: handleMint
+        # - event: Burn(indexed uint256,indexed uint256,indexed uint256)
+        #   handler: handleBurn
